@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <circle cx="16" cy="16" r="16" fill="#E5001A"/>
+  <text x="16" y="20.5"
+    font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif"
+    font-size="13"
+    font-weight="500"
+    fill="white"
+    text-anchor="middle"
+    letter-spacing="0.8">hsp</text>
+</svg>

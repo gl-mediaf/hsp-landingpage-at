@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Anfrage eingegangen – hsp" description="Deine Bewerbung ist bei uns angekommen.">
+
+  <!-- Nav wie auf den anderen Seiten -->
+  <nav style="position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:8px 20px;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(27,42,74,0.06)">
+    <img src="/images/hsp-logo.png" alt="hsp" style="height:34px" />
+  </nav>
+
+  <div style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:6rem 2rem 2rem;background:#fff;text-align:center">
+
+    <div style="width:80px;height:80px;border-radius:50%;background:#97BF0D;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem">
+      <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+      </svg>
+    </div>
+
+    <h1 style="font-family:'BundaySlab',serif;font-size:clamp(2rem,6vw,3rem);color:#1B2A4A;line-height:1.1;margin-bottom:1rem">
+      Anfrage eingegangen!
+    </h1>
+    <p style="color:rgba(27,42,74,0.6);font-size:1.1rem;font-weight:600;max-width:380px;line-height:1.6;margin-bottom:2rem">
+      Danke – wir melden uns innerhalb von <strong style="color:#1B2A4A">24 Stunden</strong>.<br/>
+      Schau doch mal bei Instagram vorbei!
+    </p>
+
+    <a href="https://www.instagram.com/hsp_derjob" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;font-weight:800;font-size:1rem;padding:14px 32px;border-radius:14px;text-decoration:none">
+      <svg width="22" height="22" fill="white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      @hsp_derjob auf Instagram
+    </a>
+  </div>
+
+  <style is:global>
+    @font-face {
+      font-family: 'BundaySlab';
+      src: url('/fonts/BundaySlab-Bold.otf') format('opentype');
+      font-weight: 700;
+      font-display: swap;
+    }
+  </style>
+
+<!-- Footer -->
+<footer style="padding:1.25rem 1.5rem;text-align:center;border-top:1px solid rgba(27,42,74,0.1);margin-top:2rem;">
+  <p style="margin:0;font-size:0.78rem;color:rgba(27,42,74,0.4);">
+    © 2026 hsp Die Fundraiser GmbH &nbsp;·&nbsp;
+    <a href="/impressum" style="color:rgba(27,42,74,0.5);text-decoration:none;">Impressum</a>
+    &nbsp;·&nbsp;
+    <a href="/datenschutz" style="color:rgba(27,42,74,0.5);text-decoration:none;">Datenschutz</a>
+  </p>
+</footer>
+</Layout>

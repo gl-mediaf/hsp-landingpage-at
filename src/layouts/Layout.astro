@@ -1,0 +1,164 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title = "hsp – Der Ferienjob mit dem gewissen Etwas",
+  description = "Das ist für dich drin – in 4 Wochen richtig gutes Geld machen. Für den guten Zweck von Tür zu Tür. Jetzt anfragen.",
+  ogImage = "https://starten.hsp-derjob.at/images/og-image.jpg",
+} = Astro.props;
+
+const phKey = import.meta.env.PUBLIC_POSTHOG_PROJECT_TOKEN || '';
+const phHost = import.meta.env.PUBLIC_POSTHOG_HOST || 'https://eu.i.posthog.com';
+const canonicalURL = "https://starten.hsp-derjob.at";
+---
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#1B2A4A" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="de_AT" />
+    <meta property="og:site_name" content="hsp – Die Fundraiser" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <title>{title}</title>
+
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage:              'denied',
+        ad_user_data:            'denied',
+        ad_personalization:      'denied',
+        analytics_storage:       'denied',
+        functionality_storage:   'denied',
+        personalization_storage: 'denied',
+        security_storage:        'granted',
+        wait_for_update:         500,
+      });
+      gtag('js', new Date());
+    </script>
+
+    <script is:inline>
+      (function(){
+        var p = new URLSearchParams(window.location.search);
+        ['utm_source','utm_medium','utm_campaign','utm_content','utm_term',
+         'fbclid','gclid','ScCid','ttclid'].forEach(function(k){
+          if (p.get(k)) sessionStorage.setItem(k, p.get(k));
+        });
+        if (p.get('fbclid') && !sessionStorage.getItem('fbclid_ts')) {
+          sessionStorage.setItem('fbclid_ts', String(Date.now()));
+        }
+      })();
+    </script>
+
+    <script is:inline define:vars={{ phKey, phHost }}>
+      if (phKey) {
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init(phKey, { api_host: phHost, defaults: '2026-01-30' });
+      }
+    </script>
+
+    <script is:inline>
+      (function(){
+        function loadGTM() {
+          var f = document.getElementsByTagName('script')[0],
+              j = document.createElement('script');
+          j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-TP6LV2M';
+          f.parentNode.insertBefore(j, f);
+        }
+        window.__hspLoadTracking = loadGTM;
+        try {
+          if (localStorage.getItem('hsp_cookie_consent') === 'all') loadGTM();
+        } catch(e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-white text-hsp-dark antialiased overflow-x-hidden">
+    <slot />
+
+    <div id="cookie-banner" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.55);align-items:center;justify-content:center;padding:1rem;">
+      <div style="background:#1B2A4A;color:#fff;padding:1.5rem 1.75rem;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,0.35);max-width:440px;width:100%;">
+        <p style="margin:0 0 1.1rem;font-size:0.85rem;line-height:1.6;opacity:0.9;">
+          Wir nutzen Cookies &amp; Tracking-Tools (Google, Meta) für Analyse und Werbung.
+          <a href="/datenschutz" style="color:#97BF0D;text-decoration:underline;">Datenschutzerklärung</a>
+        </p>
+        <div style="display:flex;gap:0.6rem;justify-content:flex-end;">
+          <button id="cookie-reject" style="background:transparent;border:1.5px solid rgba(255,255,255,0.35);color:#fff;font-size:0.8rem;font-weight:600;padding:0.5rem 1rem;border-radius:7px;cursor:pointer;white-space:nowrap;">
+            Nur notwendige
+          </button>
+          <button id="cookie-accept" style="background:#97BF0D;border:none;color:#1B2A4A;font-size:0.8rem;font-weight:800;padding:0.5rem 1.1rem;border-radius:7px;cursor:pointer;white-space:nowrap;">
+            Alle akzeptieren
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script is:inline>
+      (function(){
+        var banner = document.getElementById('cookie-banner');
+        function grantConsent() {
+          gtag('consent', 'update', {
+            ad_storage:'granted',ad_user_data:'granted',
+            ad_personalization:'granted',analytics_storage:'granted',
+            functionality_storage:'granted',personalization_storage:'granted',
+          });
+        }
+        function denyConsent() {
+          gtag('consent', 'update', {
+            ad_storage:'denied',ad_user_data:'denied',
+            ad_personalization:'denied',analytics_storage:'denied',
+          });
+        }
+        function hasConsent() {
+          try { return !!localStorage.getItem('hsp_cookie_consent'); } catch(e) { return false; }
+        }
+        if (!hasConsent()) {
+          banner.style.display = 'flex';
+        } else if (localStorage.getItem('hsp_cookie_consent') === 'all') {
+          grantConsent();
+        }
+        document.getElementById('cookie-accept').addEventListener('click', function(){
+          try { localStorage.setItem('hsp_cookie_consent', 'all'); } catch(e) {}
+          banner.style.display = 'none';
+          grantConsent();
+          if (window.__hspLoadTracking) window.__hspLoadTracking();
+        });
+        document.getElementById('cookie-reject').addEventListener('click', function(){
+          try { localStorage.setItem('hsp_cookie_consent', 'necessary'); } catch(e) {}
+          banner.style.display = 'none';
+          denyConsent();
+        });
+        window.openCookieSettings = function() {
+          try { localStorage.removeItem('hsp_cookie_consent'); } catch(e) {}
+          banner.style.display = 'flex';
+        };
+      })();
+    </script>
+  </body>
+</html>

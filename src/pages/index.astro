@@ -1,0 +1,1251 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="hsp – Der Ferienjob mit dem gewissen Etwas"
+  description="Das ist für dich drin – in 4 Wochen richtig gutes Geld machen. Für das Österreichische Rote Kreuz von Tür zu Tür. Jetzt anfragen."
+>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+<div id="app">
+
+  <!-- ══════════════════════════════════════════════
+       PAGE 1
+  ══════════════════════════════════════════════════ -->
+  <div id="page-1" class="page active">
+
+    <!-- NAV -->
+    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-center px-5 py-2 nav-bar">
+      <img src="/images/hsp-logo.png" alt="hsp" class="hsp-logo-img" />
+    </nav>
+
+    <!-- HERO -->
+    <section class="relative overflow-hidden hero-section">
+      <div class="absolute inset-0 z-0">
+        <img
+          src="/images/hero-bild.jpg"
+          alt="hsp Fundraiserin"
+          class="w-full h-full object-cover" style="object-position: center 8%"
+          onerror="this.src='https://static.funnelcockpit.com/upload/LLmaqMFur7JxCm9fW/83f030975e710fa51e73d412a5b6b838.png'"
+        />
+        <div class="absolute inset-0" style="background:linear-gradient(to top,#1B2A4A 0%,rgba(27,42,74,0.7) 40%,rgba(27,42,74,0.2) 100%)"></div>
+      </div>
+      <div class="relative z-10 px-5 md:px-16 hero-content max-w-4xl">
+        <h1 class="hd text-white mb-4" style="font-size:clamp(2.6rem,11vw,6.5rem);line-height:0.92">
+          3 Monate<br />
+          <span style="color:#97BF0D">arbeiten.</span><br />
+          9 Monate<br />
+          reisen.
+        </h1>
+        <!-- Ø earnings highlight -->
+        <div class="inline-flex items-baseline gap-2 mb-4">
+          <span class="hd text-white" style="font-size:clamp(1.6rem,5vw,2.2rem)">Ø 3.300 €</span>
+          <span style="color:#97BF0D;font-weight:800;font-size:clamp(0.85rem,2.5vw,1rem)">in 4 Wochen</span>
+        </div>
+        <p class="text-white/70 font-bold leading-relaxed" style="font-size:clamp(0.9rem,2.5vw,1.1rem);max-width:420px">
+          Für den guten Zweck von Tür zu Tür unterwegs –
+          und dabei richtig gutes Geld machen.
+        </p>
+        <div class="mt-5 hidden md:flex items-center gap-3 text-white/40 text-sm font-semibold">
+          <div class="scroll-dot-wrap"><span class="scroll-dot"></span></div>
+          Scroll
+        </div>
+      </div>
+    </section>
+
+    <!-- NGO LOGOS BAR -->
+    <section class="bg-[#1B2A4A] py-5 px-5">
+      <div class="max-w-5xl mx-auto">
+        <p class="text-white/60 text-xs font-bold uppercase tracking-widest mb-5 text-center" style="letter-spacing:0.18em">Unterwegs für diese Organisationen</p>
+        <!-- Österreichisches Rotes Kreuz -->
+        <div class="flex items-center justify-center">
+          <div class="ngo-card"><img src="/images/ngo-oerk.webp" alt="Österreichisches Rotes Kreuz" class="ngo-logo-color" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WAS DU MACHST -->
+    <section id="was-du-machst" class="bg-white py-10 md:py-16 px-5">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div>
+          <h2 class="hd text-[#1B2A4A]" style="font-size:clamp(2rem,6vw,3.25rem);line-height:1.0">
+            Du überzeugst Menschen<br />für den <span style="color:#97BF0D">guten Zweck.</span>
+          </h2>
+          <p class="text-[#1B2A4A]/65 text-base md:text-lg leading-relaxed mt-5 mb-7 font-semibold">
+            Als Fundraiser bist du für renommierte Hilfsorganisationen von Tür zu Tür
+            unterwegs – und begeisterst Menschen im direkten Gespräch für fördernde
+            Mitgliedschaften. Nicht einfach. Genau deshalb machst du richtig gutes Geld.
+          </p>
+          <ul class="space-y-3">
+            {[
+              'Entwickel dich rhetorisch weiter',
+              'Arbeite für einen guten Zweck',
+              'Gemeinsam mit deinen Freunden',
+            ].map(item => (
+              <li class="flex items-start gap-3 text-[#1B2A4A]/75 font-semibold text-sm md:text-base">
+                <span class="mt-0.5 shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#97BF0D">✓</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <button onclick="goToPage(2)" class="btn-primary mt-7" style="padding:14px 28px;font-size:1rem;display:inline-flex;align-items:center;gap:8px">
+            Das ist für dich drin →
+          </button>
+        </div>
+        <div class="relative">
+          <img src="/images/pr-hero.jpg" alt="Fundraiser im Gespräch" class="w-full rounded-3xl object-cover shadow-xl" style="aspect-ratio:4/5" />
+          <div class="absolute -bottom-4 -left-4 shadow-xl flex flex-col items-center justify-center" style="background:#97BF0D;border-radius:50%;width:130px;height:130px">
+            <p class="hd text-white" style="font-size:1.5rem;line-height:1.1">Ø 3.300 €</p>
+            <p class="text-white/80 text-sm font-bold">in 4 Wochen</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PHONE MOCKUP – UGC -->
+    <section class="bg-[#F0F7FF] py-10 md:py-16 px-5 overflow-hidden">
+      <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+          <h2 class="hd text-[#1B2A4A]" style="font-size:clamp(2rem,6vw,3rem);line-height:1.0">
+            Schau rein –<br /><span style="color:#E5007D">echter Alltag.</span>
+          </h2>
+          <p class="text-[#1B2A4A]/65 text-base md:text-lg leading-relaxed mt-5 font-semibold">
+            Kein Büro, kein 9-to-5. Du bist draußen, im Gespräch,
+            mit deiner Crew unterwegs – und wächst mit jeder Tür.
+          </p>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="phone-screen" style="overflow:hidden;position:relative;background:#000">
+              <!-- Single video element — iOS-kompatibel -->
+              <video id="ugc-video" playsinline
+                poster="/videos/ugc-poster.jpg"
+                style="width:100%;height:100%;object-fit:cover;display:block;transition:opacity 0.2s">
+                <source src="/videos/ugc-hero.mp4" type="video/mp4" />
+              </video>
+              <!-- Dots -->
+              <div id="ugc-dots" style="position:absolute;bottom:10px;left:0;right:0;display:flex;justify-content:center;gap:8px;z-index:3">
+                <span class="ugc-dot" style="width:10px;height:10px;border-radius:50%;background:#fff;opacity:1;transition:opacity .2s;cursor:pointer"></span>
+                <span class="ugc-dot" style="width:10px;height:10px;border-radius:50%;background:#fff;opacity:0.4;transition:opacity .2s;cursor:pointer"></span>
+              </div>
+              <!-- Play overlay -->
+              <div id="ugc-play-overlay" style="position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(0,0,0,0.25);cursor:pointer" onclick="ugcStart()">
+                <div style="width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,0.92);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.3)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#1B2A4A"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+                <span style="color:#fff;font-size:0.7rem;font-weight:800;margin-top:8px;letter-spacing:0.04em;text-shadow:0 1px 4px rgba(0,0,0,0.5)">TIPPE ZUM ABSPIELEN</span>
+              </div>
+              <!-- Pause overlay (shown when paused mid-play) -->
+              <div id="ugc-pause-overlay" style="position:absolute;inset:0;z-index:3;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.3);cursor:pointer" onclick="ugcTogglePlay()">
+                <div style="width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,0.92);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.3)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#1B2A4A"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                </div>
+              </div>
+              <!-- Mute button -->
+              <div id="ugc-mute-btn" style="position:absolute;top:10px;right:10px;z-index:5;display:none;width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;cursor:pointer" onclick="ugcToggleMute()">
+                <svg id="ugc-mute-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section id="community" class="bg-white py-10 md:py-16 px-5">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="hd text-[#1B2A4A]" style="font-size:clamp(2rem,6vw,3rem);line-height:1.0">
+            Deine Community<br /><span style="color:#E5007D">wartet auf dich.</span>
+          </h2>
+          <p class="text-[#1B2A4A]/55 text-base md:text-lg mt-3 max-w-lg mx-auto font-semibold">
+            Neue Freundschaften, unvergessliche Erlebnisse, echte Verbindungen.
+          </p>
+        </div>
+        <div class="community-grid">
+          <img src="/images/pr-1.jpg"   alt="" class="community-img tall" />
+          <img src="/images/8-opt.jpg"  alt="" class="community-img" />
+          <img src="/images/10-opt.jpg" alt="" class="community-img" />
+          <img src="/images/5-opt.jpg"  alt="" class="community-img tall" />
+          <img src="/images/pr-2.jpg"   alt="" class="community-img" />
+          <img src="/images/pr-3.jpg"   alt="" class="community-img" />
+        </div>
+      </div>
+    </section>
+
+    <!-- GOOGLE REVIEWS SLIDER -->
+    <section class="bg-[#1B2A4A] py-10 md:py-16 px-5 overflow-hidden">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="hd text-white" style="font-size:clamp(2rem,6vw,3rem);line-height:1.0">
+            Was andere sagen.
+          </h2>
+          <div class="flex items-center justify-center gap-2 mt-3">
+            <span class="text-yellow-400 text-xl">★★★★★</span>
+            <span class="hd text-white" style="font-size:1.4rem">4.8</span>
+            <span class="text-white/40 text-sm font-semibold">auf Google</span>
+          </div>
+        </div>
+
+        <!-- Image slider -->
+        <div class="reviews-slider-wrap">
+          <div class="reviews-track" id="reviews-track">
+            {[
+              'https://static.funnelcockpit.com/upload/LLmaqMFur7JxCm9fW/0792d43e1c825562988748393508c1b5.png',
+              'https://static.funnelcockpit.com/upload/LLmaqMFur7JxCm9fW/dac8c3f2ef50bf4f8d1d47a3e80cf14e.png',
+              'https://static.funnelcockpit.com/upload/LLmaqMFur7JxCm9fW/d2c0b0e3ad7ceed17618c4c1178f6b6b.png',
+              'https://static.funnelcockpit.com/upload/LLmaqMFur7JxCm9fW/ff88471118fbb49a9fe62493d87ee8e2.png',
+              'https://static.funnelcockpit.com/upload/LLmaqMFur7JxCm9fW/ffd8e294bb250c2a760960795324b0e9.png',
+              'https://static.funnelcockpit.com/upload/LLmaqMFur7JxCm9fW/0a611f8ed1e9324a436d4b4394587988.png',
+            ].map(url => (
+              <div class="review-slide">
+                <img src={url} alt="Google Bewertung" class="review-img" />
+              </div>
+            ))}
+          </div>
+          <!-- prev/next -->
+          <button class="rev-btn rev-prev" id="rev-prev" onclick="revMove(-1)">‹</button>
+          <button class="rev-btn rev-next" id="rev-next" onclick="revMove(1)">›</button>
+        </div>
+
+        <!-- dots -->
+        <div class="flex justify-center gap-2 mt-6" id="rev-dots"></div>
+
+      </div>
+    </section>
+
+    <!-- CTA TO PAGE 2 -->
+    <section class="py-12 md:py-20 px-5 text-center" style="background:#97BF0D">
+      <h2 class="hd text-white max-w-xl mx-auto" style="font-size:clamp(2rem,6vw,3rem)">
+        Was ist eigentlich<br />für dich drinnen?
+      </h2>
+      <p class="text-white/80 text-base md:text-lg mt-4 mb-8 max-w-md mx-auto font-semibold">
+        Kein fixes Gehalt – du bestimmst, wie viel du machst. Rechne es selbst nach.
+      </p>
+      <button onclick="goToPage(2)" class="btn-dark text-base px-8 py-4">
+        Das ist für dich drin →
+      </button>
+    </section>
+
+  </div><!-- /page-1 -->
+
+
+  <!-- ══════════════════════════════════════════════
+       PAGE 2 — GELD MACHEN + RECHNER
+  ══════════════════════════════════════════════════ -->
+  <div id="page-2" class="page">
+
+    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-center px-5 py-2 nav-bar">
+      <img src="/images/hsp-logo.png" alt="hsp" class="hsp-logo-img" />
+    </nav>
+
+    <!-- Mindestgarantie -->
+    <section class="bg-white pt-24 pb-14 px-5">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="hd text-[#1B2A4A] text-center mb-3" style="font-size:clamp(2rem,6vw,3rem)">
+          Dein Geld. <span style="color:#97BF0D">Dein Einsatz.</span>
+        </h2>
+        <p class="text-[#1B2A4A]/55 text-base md:text-lg text-center max-w-xl mx-auto mb-12 font-semibold">
+          Du wirst nach Provision bezahlt. Je mehr du begeisterst, desto mehr machst du.
+          Als Sicherheitsnetz gibt's eine garantierte Basis.
+        </p>
+        <div class="guarantee-card">
+          <p class="text-[#1B2A4A]/40 text-xs font-bold uppercase tracking-widest mb-2">Garantierte Mindestprovision</p>
+          <p class="hd" style="color:#97BF0D;font-size:3.5rem;line-height:1">2.400 €</p>
+          <p class="text-[#1B2A4A]/50 mt-1 mb-5 text-sm font-semibold">in 4 Wochen</p>
+          <div class="flex items-center gap-2 mt-2">
+            <span class="w-2.5 h-2.5 rounded-full shrink-0" style="background:#97BF0D"></span>
+            <span class="text-[#1B2A4A]/60 text-sm font-semibold">+ <strong class="text-[#1B2A4A]">200 € Anreisebonus</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECHNER -->
+    <section class="bg-[#F0F7FF] py-10 md:py-14 px-5">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="hd text-[#1B2A4A] text-center mb-3" style="font-size:clamp(2rem,6vw,3rem)">
+          Rechne deinen <span style="color:#E5007D">Einsatz durch.</span>
+        </h2>
+
+
+        <!-- Chart + Photo: single card on mobile, split on desktop -->
+        <div class="calc-main-grid">
+
+          <!-- LEFT: curve -->
+          <div class="chart-panel">
+            <div class="chart-wrap" id="chart-wrap">
+              <svg id="provision-chart" viewBox="0 0 600 260" preserveAspectRatio="none" style="width:100%;height:100%;display:block;cursor:crosshair">
+                <defs>
+                  <linearGradient id="curveGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#E5007D"/>
+                    <stop offset="100%" stop-color="#E5007D" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <g id="chart-bg"></g>
+                <g id="chart-grid"></g>
+                <!-- Y-axis week labels -->
+                <text x="6" y="248" font-size="13" font-weight="800" fill="rgba(27,42,74,0.6)" font-family="Nunito, sans-serif">Woche 1</text>
+                <text x="6" y="202" font-size="13" font-weight="800" fill="rgba(27,42,74,0.6)" font-family="Nunito, sans-serif">Woche 2</text>
+                <text x="6" y="156" font-size="13" font-weight="800" fill="rgba(27,42,74,0.6)" font-family="Nunito, sans-serif">Woche 3</text>
+                <text x="6" y="110" font-size="13" font-weight="800" fill="rgba(27,42,74,0.6)" font-family="Nunito, sans-serif">Woche 4</text>
+                <text x="6" y="64"  font-size="13" font-weight="800" fill="rgba(27,42,74,0.6)" font-family="Nunito, sans-serif">Woche 5</text>
+                <text x="6" y="18"  font-size="13" font-weight="800" fill="rgba(27,42,74,0.6)" font-family="Nunito, sans-serif">Woche 6</text>
+                <path id="chart-area" fill="url(#curveGrad)" opacity="0.25"/>
+                <path id="chart-curve" fill="none" stroke="#E5007D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Ø 3.300€ marker (dashed line only, no badge) -->
+                <line id="avg-line" x1="0" y1="0" x2="0" y2="260" stroke="#97BF0D" stroke-width="1.5" stroke-dasharray="5,4"/>
+                <line id="cursor-line" x1="0" y1="0" x2="0" y2="260" stroke="#1B2A4A" stroke-width="1.5" stroke-dasharray="4,3" opacity="0"/>
+                <circle id="cursor-dot" r="6" fill="#E5007D" stroke="#fff" stroke-width="2" opacity="0"/>
+              </svg>
+              <div id="chart-tooltip" class="chart-tooltip" style="opacity:0;pointer-events:none">
+                <p id="tt-eh" class="tt-small"></p>
+                <p id="tt-factor" class="tt-mid"></p>
+                <p id="tt-money" class="tt-big"></p>
+              </div>
+              <div class="takeoff-marker" id="takeoff-marker">
+                <div style="position:absolute;top:0;bottom:0;width:1px;border-left:1px dashed rgba(27,42,74,0.25)"></div>
+              </div>
+              <!-- Mobile finger hint -->
+              <div id="chart-finger" style="display:none;position:absolute;top:50%;left:15%;transform:translateY(-50%);z-index:20;pointer-events:none;flex-direction:column;align-items:center;gap:5px">
+                <div style="background:rgba(27,42,74,0.82);backdrop-filter:blur(6px);border-radius:20px;padding:6px 12px;display:flex;align-items:center;gap:7px">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 3.5a1.5 1.5 0 0 1 3 0V11h1a2 2 0 0 1 2 2v1.5l.9 2.7A2 2 0 0 1 15.5 20h-5a2 2 0 0 1-1.9-1.37L7.5 15v-1.5a.5.5 0 0 1 .5-.5h.5V7a1.5 1.5 0 0 1 1.5-1.5V3.5z" stroke="white" stroke-width="1" fill="rgba(255,255,255,0.15)"/><path d="M13 3.5V11M10 5V11M10 5a1.5 1.5 0 0 0-1.5 1.5V13H8a.5.5 0 0 0-.5.5V15l1.1 3.63A2 2 0 0 0 10.5 20h5a2 2 0 0 0 1.9-2.63L16.5 15v-2a2 2 0 0 0-2-2H13V3.5a1.5 1.5 0 0 0-3 0" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+                  <span style="color:white;font-size:0.72rem;font-weight:800;letter-spacing:0.02em">Wischen</span>
+                  <span style="color:rgba(229,0,125,0.9);font-size:0.72rem;font-weight:900">→</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-between text-xs font-bold text-[#1B2A4A]/35 mt-1">
+              <span>0 €</span>
+              <span>Ø 3.300 € nach 4 Wochen</span>
+              <span>~5.500 €</span>
+            </div>
+            <div id="chart-hint" style="text-align:center;font-size:0.72rem;font-weight:700;color:rgba(229,0,125,0.6);margin-top:4px;opacity:0;transition:opacity 0.4s;pointer-events:none">
+              ← Schiebe über die Kurve →
+            </div>
+            <!-- Mobile photo strip — above chart on mobile via CSS order -->
+            <div class="mobile-photo-strip" style="order:-1">
+              <img id="context-photo-mobile" src="https://images.unsplash.com/photo-1527786356703-4b100091cd2c?w=600&q=80" alt="" />
+              <div class="mobile-photo-cap">
+                <span id="caption-emoji-m">🗺️</span>
+                <span id="caption-text-m">Schiebe über die Kurve</span>
+              </div>
+            </div>
+            <!-- Stats: nur Dein Geld -->
+            <div class="mt-4">
+              <div class="stat-box" style="border-top:3px solid #E5007D">
+                <p class="stat-label">Dein Geld</p>
+                <p class="hd stat-val" id="r-net" style="color:#E5007D">–</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: photo (desktop only) -->
+          <div class="photo-panel">
+            <img id="context-photo" src="https://images.unsplash.com/photo-1527786356703-4b100091cd2c?w=600&q=80" alt="" class="context-img" />
+            <div class="photo-caption">
+              <span class="caption-emoji" id="caption-emoji">🗺️</span>
+              <span class="caption-text" id="caption-text">Bewege den Cursor über die Kurve</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-12 md:py-20 px-5 text-center" style="background:#E5007D">
+      <h2 class="hd text-white max-w-xl mx-auto" style="font-size:clamp(2rem,6vw,3rem)">
+        Klingt gut?<br />Dann frag jetzt an.
+      </h2>
+      <p class="text-white/80 text-base md:text-lg mt-4 mb-8 font-semibold">Wir melden uns innerhalb von 24–48 Stunden bei dir!</p>
+      <button onclick="goToPage(3)" class="btn-light px-8 py-4">Jetzt anfragen →</button>
+    </section>
+
+  </div><!-- /page-2 -->
+
+
+  <!-- ══════════════════════════════════════════════
+       PAGE 3 — FORM
+  ══════════════════════════════════════════════════ -->
+  <div id="page-3" class="page">
+    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-center px-5 py-2 nav-bar">
+      <img src="/images/hsp-logo.png" alt="hsp" class="hsp-logo-img" />
+    </nav>
+    <section class="min-h-screen bg-white flex items-center justify-center px-5 pt-24 pb-12">
+      <div class="w-full max-w-md">
+        <div class="mb-8">
+          <div class="flex justify-between text-xs text-[#1B2A4A]/40 font-bold mb-2">
+            <span id="step-label">Schritt 1 von 3</span>
+            <span id="step-pct">33 %</span>
+          </div>
+          <div class="h-2 rounded-full overflow-hidden" style="background:rgba(27,42,74,0.1)">
+            <div class="h-full rounded-full transition-all duration-500" id="progress-bar" style="width:33%;background:#97BF0D"></div>
+          </div>
+        </div>
+
+        <!-- Step 1 -->
+        <div id="fs-1" class="fstep">
+          <h2 class="hd text-[#1B2A4A] mb-1" style="font-size:2.2rem">Wer bist du?</h2>
+          <p class="text-[#1B2A4A]/50 mb-7 font-semibold">Kurz vorstellen – das war's für Schritt 1.</p>
+          <div class="space-y-3">
+            <div class="grid grid-cols-2 gap-3">
+              <div class="fgroup"><label class="flabel">Vorname *</label><input id="f-fn" type="text" class="finput" placeholder="Max" /></div>
+              <div class="fgroup"><label class="flabel">Nachname *</label><input id="f-ln" type="text" class="finput" placeholder="Mustermann" /></div>
+            </div>
+            <div class="fgroup"><label class="flabel">Alter *</label><input id="f-age" type="number" class="finput" placeholder="21" min="18" /></div>
+          </div>
+          <!-- Honeypot: hidden from real users, bots fill it in -->
+          <div style="position:absolute;left:-9999px;top:-9999px;opacity:0;pointer-events:none" aria-hidden="true">
+            <input id="f-hp" type="text" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+          <button onclick="nextStep(2)" class="btn-primary w-full mt-7 py-4">Weiter →</button>
+        </div>
+
+        <!-- Step 2 -->
+        <div id="fs-2" class="fstep hidden">
+          <h2 class="hd text-[#1B2A4A] mb-1" style="font-size:2.2rem">Wie erreichst du dich?</h2>
+          <p class="text-[#1B2A4A]/50 mb-7 font-semibold">Damit wir uns melden können.</p>
+          <div class="space-y-3">
+            <div class="fgroup"><label class="flabel">E-Mail *</label><input id="f-email" type="email" class="finput" placeholder="max@beispiel.de" /></div>
+            <div class="fgroup"><label class="flabel">Telefon *</label><input id="f-phone" type="tel" class="finput" placeholder="+49 ..." /></div>
+            <div class="fgroup"><label class="flabel">Beste Erreichbarkeit</label>
+              <select id="f-reach" class="finput">
+                <option value="">Bitte wählen …</option>
+                <option>Vormittags</option><option>Mittags</option><option>Nachmittags</option><option>Abends</option>
+              </select>
+            </div>
+          </div>
+          <div class="flex gap-3 mt-7">
+            <button onclick="nextStep(1)" class="btn-outline flex-1 py-4">← Zurück</button>
+            <button onclick="nextStep(3)" class="btn-primary flex-1 py-4">Weiter →</button>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div id="fs-3" class="fstep hidden">
+          <h2 class="hd text-[#1B2A4A] mb-1" style="font-size:2.2rem">Fast geschafft.</h2>
+          <p class="text-[#1B2A4A]/50 mb-7 font-semibold">Noch ein paar Details.</p>
+          <div class="space-y-3">
+            <div class="grid grid-cols-2 gap-3">
+              <div class="fgroup"><label class="flabel">Ort *</label><input id="f-city" type="text" class="finput" placeholder="München" /></div>
+              <div class="fgroup"><label class="flabel">PLZ *</label><input id="f-plz" type="text" class="finput" placeholder="80331" /></div>
+            </div>
+            <div class="fgroup"><label class="flabel">Land</label>
+              <select id="f-land" class="finput"><option>Deutschland</option><option>Österreich</option><option>Schweiz</option><option>Sonstiges</option></select>
+            </div>
+            <div class="fgroup"><label class="flabel">Was motiviert dich? *</label>
+              <textarea id="f-motive" class="finput" rows="3" placeholder="Kurz in eigenen Worten …"></textarea>
+            </div>
+            <p class="text-[#1B2A4A]/30 text-xs font-medium">Mit dem Absenden akzeptierst du unsere <a href="https://www.hsp-derjob.de/datenschutz/" target="_blank" class="underline">Datenschutzerklärung</a>.</p>
+          </div>
+          <div class="flex gap-3 mt-7">
+            <button onclick="nextStep(2)" class="btn-outline flex-1 py-4">← Zurück</button>
+            <button onclick="submitForm()" class="btn-primary flex-1 py-4">Anfrage absenden ✓</button>
+          </div>
+        </div>
+
+        <!-- Success -->
+        <div id="fs-ok" class="fstep hidden text-center">
+          <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-5" style="background:#97BF0D">
+            <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <h2 class="hd text-[#1B2A4A] mb-3" style="font-size:2.2rem">Anfrage eingegangen!</h2>
+          <p class="text-[#1B2A4A]/60 text-base max-w-xs mx-auto font-semibold">
+            Danke – wir melden uns in <strong class="text-[#1B2A4A]">24 Stunden</strong>. Schau auch in deinen Spam-Ordner.
+          </p>
+          <button onclick="goToPage(1)" class="btn-outline mt-7 px-8 py-3">Zurück zur Startseite</button>
+        </div>
+      </div>
+    </section>
+  </div><!-- /page-3 -->
+
+</div><!-- /app -->
+
+
+<!-- ──────────────────── STYLES ── -->
+<style is:global>
+  @font-face {
+    font-family: 'BundaySlab';
+    src: url('/fonts/BundaySlab-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'BundaySlab';
+    src: url('/fonts/BundaySlab-Light.otf') format('opentype');
+    font-weight: 300;
+    font-display: swap;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: #fff; color: #1B2A4A; overflow-x: hidden; font-family: 'Nunito', system-ui, sans-serif; }
+
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* Headline font */
+  .hd { font-family: 'BundaySlab', 'Arial Black', sans-serif; font-weight: 700; }
+
+  /* Nav */
+  .nav-bar { background: rgba(255,255,255,0.94); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(27,42,74,0.08); }
+
+  /* HSP Logo */
+  .hsp-logo-img { width: 34px; height: 34px; object-fit: contain; }
+
+
+  /* Buttons */
+  .btn-nav { background: #1B2A4A; color: #fff; font-weight: 800; border-radius: 100px; border: none; cursor: pointer; padding: 9px 20px; font-size: 0.82rem; transition: background 0.2s; font-family: 'Nunito', sans-serif; }
+  .btn-nav:hover { background: #E5007D; }
+  .btn-primary { background: #97BF0D; color: #fff; font-weight: 900; border-radius: 100px; border: none; cursor: pointer; display: inline-block; text-align: center; transition: all 0.2s; font-family: 'Nunito', sans-serif; font-size: 1rem; }
+  .btn-primary:hover { background: #7da00b; transform: translateY(-1px); }
+  .btn-dark { background: #1B2A4A; color: #fff; font-weight: 900; border-radius: 100px; border: none; cursor: pointer; display: inline-block; text-align: center; transition: all 0.2s; font-family: 'Nunito', sans-serif; font-size: 1rem; }
+  .btn-dark:hover { background: #E5007D; transform: translateY(-1px); }
+  .btn-light { background: #fff; color: #E5007D; font-weight: 900; border-radius: 100px; border: none; cursor: pointer; display: inline-block; text-align: center; transition: all 0.2s; font-family: 'Nunito', sans-serif; font-size: 1rem; }
+  .btn-light:hover { background: #1B2A4A; color: #fff; }
+  .btn-outline { background: transparent; color: #1B2A4A; font-weight: 800; border-radius: 100px; border: 2px solid rgba(27,42,74,0.2); cursor: pointer; transition: all 0.2s; display: inline-block; text-align: center; font-family: 'Nunito', sans-serif; font-size: 1rem; }
+  .btn-outline:hover { border-color: #1B2A4A; }
+
+  /* Hero */
+  .hero-section {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .hero-content {
+    padding-top: 64px;
+    padding-bottom: 28px;
+  }
+  @media(min-width:768px) {
+    .hero-section { min-height: 100vh; }
+    .hero-content { padding-top: 96px; padding-bottom: 64px; }
+  }
+
+  /* Scroll indicator */
+  .scroll-dot-wrap { width: 22px; height: 36px; border: 2px solid rgba(255,255,255,0.4); border-radius: 12px; position: relative; }
+  .scroll-dot { position: absolute; left: 50%; top: 6px; width: 4px; height: 8px; background: rgba(255,255,255,0.6); border-radius: 4px; transform: translateX(-50%); animation: sdrop 2s ease-in-out infinite; }
+  @keyframes sdrop { 0%,100% { top:6px; opacity:1; } 80% { top:18px; opacity:0; } }
+
+  /* NGO logos */
+  .ngo-card { background: #fff; border-radius: 14px; padding: 12px 20px; display: flex; align-items: center; justify-content: center; min-width: 140px; }
+  .ngo-logo-color { height: 44px; object-fit: contain; }
+
+  /* NGO mobile slider */
+  .ngo-slider-wrap { overflow: hidden; }
+  .ngo-slider-track { display: flex; transition: transform 0.5s cubic-bezier(0.4,0,0.2,1); }
+  .ngo-slide { flex: 0 0 50%; display: flex; align-items: center; justify-content: center; padding: 0 8px; }
+
+  /* Phone */
+  .phone-mockup { width: 300px; height: 600px; background: #fff; border-radius: 40px; border: 3px solid rgba(27,42,74,0.12); padding: 10px; position: relative; box-shadow: 0 30px 60px rgba(27,42,74,0.18); }
+  .phone-notch { position: absolute; top: 14px; left: 50%; transform: translateX(-50%); width: 60px; height: 5px; background: rgba(27,42,74,0.15); border-radius: 4px; z-index: 10; }
+  .phone-screen { width: 100%; height: 100%; border-radius: 30px; overflow: hidden; position: relative; }
+  .ugc-slides { display: flex; width: 300%; height: 100%; transition: transform 0.4s cubic-bezier(0.4,0,0.2,1); }
+  .ugc-slide { width: calc(100%/3); height: 100%; position: relative; flex-shrink: 0; }
+  .ugc-slide img { width: 100%; height: 100%; object-fit: cover; }
+  .ugc-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 18px 14px; background: linear-gradient(transparent, rgba(27,42,74,0.88)); }
+  .ugc-tag  { color: #97BF0D; font-size: 0.68rem; font-weight: 800; margin-bottom: 3px; }
+  .ugc-text { color: #fff; font-size: 0.76rem; font-weight: 700; }
+  .ugc-dots { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; z-index: 10; }
+  .ugc-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.35); cursor: pointer; transition: all 0.25s; }
+  .ugc-dot.active { background: #97BF0D; width: 16px; border-radius: 4px; }
+
+  /* Community grid */
+  .community-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 6px; }
+  .community-img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; transition: transform 0.3s; }
+  .community-img:hover { transform: scale(1.02); }
+  .community-img.tall { height: 258px; }
+
+  /* Google Reviews slider */
+  .reviews-slider-wrap { position: relative; overflow: hidden; border-radius: 16px; }
+  .reviews-track { display: flex; gap: 16px; transition: transform 0.4s cubic-bezier(0.4,0,0.2,1); padding: 4px 0; }
+  .review-slide { flex-shrink: 0; width: calc(100% / 2.5); }
+  .review-img { width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+  .rev-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.9); border: none; cursor: pointer; font-size: 1.4rem; font-weight: 800; color: #1B2A4A; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 12px rgba(0,0,0,0.2); transition: all 0.2s; z-index: 10; }
+  .rev-btn:hover { background: #97BF0D; color: #fff; }
+  .rev-prev { left: 8px; }
+  .rev-next { right: 8px; }
+  .rev-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.3); cursor: pointer; transition: all 0.2s; border: none; }
+  .rev-dot.active { background: #97BF0D; width: 20px; border-radius: 4px; }
+
+/* Guarantee card */
+  .guarantee-card { background: #F8FAFC; border: 2px solid rgba(151,191,13,0.25); border-radius: 20px; padding: 28px; }
+  .week-tile { background: #fff; border-radius: 12px; padding: 14px; box-shadow: 0 2px 8px rgba(27,42,74,0.06); }
+
+  /* Calc grid */
+  .calc-main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media(max-width:768px) { .calc-main-grid { grid-template-columns: 1fr; } }
+
+  .chart-panel { background: #fff; border-radius: 20px; padding: 20px; box-shadow: 0 4px 20px rgba(27,42,74,0.08); display:flex; flex-direction:column; }
+  .zone-lbl { font-size: 0.62rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; }
+  .chart-wrap { position: relative; height: 200px; cursor: crosshair; touch-action: none; }
+
+  /* Mobile photo strip (inside chart card) */
+  .mobile-photo-strip { display: none; border-radius: 14px; overflow: hidden; position: relative; height: 180px; }
+  .mobile-photo-strip img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.4s; }
+  .mobile-photo-cap { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent,rgba(27,42,74,0.85)); padding: 12px 12px 10px; display: flex; align-items: center; gap: 8px; }
+  .mobile-photo-cap span:first-child { font-size: 1.2rem; }
+  .mobile-photo-cap span:last-child { color: #fff; font-weight: 800; font-size: 0.78rem; }
+  @media(max-width:768px) {
+    .mobile-photo-strip { display: block; margin-bottom: 16px; }
+    .photo-panel { display: none; }
+  }
+
+  .chart-tooltip { position: absolute; background: rgba(27,42,74,0.92); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); color: #fff; border-radius: 10px; padding: 8px 12px; transform: translate(-50%,-115%); white-space: nowrap; z-index: 10; box-shadow: 0 4px 16px rgba(27,42,74,0.3); transition: opacity 0.15s; }
+  .chart-tooltip.flip { transform: translate(-50%, 15%); }
+  .tt-small { font-size: 0.65rem; color: rgba(255,255,255,0.5); font-weight: 700; }
+  .tt-mid   { font-size: 0.72rem; font-weight: 800; color: #97BF0D; }
+  .tt-big   { font-family: 'BundaySlab', sans-serif; font-size: 1.4rem; color: #E5007D; }
+
+  .takeoff-marker { position: absolute; top: 0; bottom: 0; pointer-events: none; }
+
+  @keyframes hspFingerSwipe {
+    0%   { left: 12%; opacity: 0; }
+    10%  { opacity: 1; }
+    75%  { opacity: 1; left: 65%; }
+    90%  { opacity: 0; left: 70%; }
+    100% { opacity: 0; left: 70%; }
+  }
+  #chart-finger { animation: hspFingerSwipe 2s ease-in-out infinite; animation-play-state: paused; }
+  #chart-finger.running { animation-play-state: running; }
+  .bonus-badge { position: absolute; top: 8px; left: 8px; background: #97BF0D; color: #fff; font-size: 0.6rem; font-weight: 800; padding: 3px 7px; border-radius: 5px; }
+
+  .stat-box { background: #F8FAFC; border-radius: 10px; padding: 10px 12px; }
+  .stat-label { font-size: 0.6rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(27,42,74,0.4); margin-bottom: 2px; }
+  .stat-val { font-size: 1.3rem; line-height: 1; }
+
+  /* Photo */
+  .photo-panel { border-radius: 20px; overflow: hidden; position: relative; min-height: 380px; }
+  .context-img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.5s; position: absolute; inset: 0; }
+  .photo-caption { position: absolute; bottom: 16px; left: 16px; right: 16px; background: rgba(27,42,74,0.85); backdrop-filter: blur(8px); border-radius: 12px; padding: 12px 14px; display: flex; align-items: center; gap: 10px; }
+  .caption-emoji { font-size: 1.4rem; }
+  .caption-text { color: #fff; font-weight: 800; font-size: 0.88rem; }
+
+  /* Org buttons */
+  .org-btn { display: flex; flex-direction: column; align-items: center; background: #fff; border: 2px solid rgba(27,42,74,0.12); border-radius: 12px; padding: 9px 16px; cursor: pointer; transition: all 0.2s; min-width: 90px; font-family: 'Nunito', sans-serif; }
+  .org-btn:hover { border-color: #E5007D; transform: translateY(-2px); }
+  .org-btn.active { background: #E5007D; border-color: #E5007D; }
+  .org-btn.active .org-name { color: #fff; }
+  .org-btn.active .org-fac  { color: rgba(255,255,255,0.7); }
+  .org-name { color: #1B2A4A; font-weight: 900; font-size: 0.85rem; }
+  .org-fac  { color: rgba(27,42,74,0.4); font-size: 0.65rem; font-weight: 700; margin-top: 1px; }
+
+  /* Form */
+  .fstep.hidden { display: none; }
+  .fgroup { display: flex; flex-direction: column; gap: 5px; }
+  .flabel { color: rgba(27,42,74,0.5); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; }
+  .finput { background: #F8FAFC; border: 2px solid rgba(27,42,74,0.1); border-radius: 12px; padding: 12px 14px; color: #1B2A4A; font-size: 1rem; outline: none; transition: border-color 0.2s; width: 100%; font-family: 'Nunito', sans-serif; font-weight: 600; }
+  .finput:focus { border-color: #97BF0D; background: #fff; }
+  .finput::placeholder { color: rgba(27,42,74,0.22); }
+  textarea.finput { resize: vertical; }
+  select.finput option { background: #fff; }
+
+  /* Mobile */
+  @media(max-width:640px) {
+    .community-grid { grid-template-columns: repeat(2,1fr); gap: 4px; }
+    .community-img { height: 130px; }
+    .community-img.tall { height: 130px; }
+    .phone-mockup { width: 240px; height: 480px; }
+    .review-slide { width: 100%; }
+    .rev-btn { display: none; }
+    .photo-panel { min-height: 200px; }
+    .guarantee-card { padding: 16px; }
+    .week-tile { padding: 10px; }
+    .chart-wrap { height: 160px; }
+  }
+</style>
+
+
+<!-- ──────────────────── SCRIPTS ── -->
+<script is:inline>
+  /* ── Click-ID & UTM Persistence (run first, before anything else) ── */
+  (function() {
+    var p = new URLSearchParams(window.location.search);
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term',
+     'fbclid','gclid','ScCid','ttclid'].forEach(function(k) {
+      var v = p.get(k);
+      if (v) sessionStorage.setItem(k, v);
+    });
+    // Store fbclid click timestamp so CAPI fbc value is accurate
+    if (p.get('fbclid') && !sessionStorage.getItem('fbclid_ts')) {
+      sessionStorage.setItem('fbclid_ts', String(Date.now()));
+    }
+  })();
+
+  /* ── A/B Variant A: register for all PostHog events ── */
+  if (window.posthog) window.posthog.register({ ab_variant: 'a' });
+
+  /* ── UGC Video Carousel (single video, iOS-kompatibel) ── */
+  (function(){
+    var vid  = document.getElementById('ugc-video');
+    var dots = Array.from(document.querySelectorAll('.ugc-dot'));
+    var screen = vid && vid.parentElement;
+    if (!vid || !screen) return;
+
+    var VIDEOS = [
+      { src: '/videos/ugc-hero.mp4',  poster: '/videos/ugc-poster.jpg' },
+      { src: '/videos/ugc-9.mp4',     poster: '/videos/ugc-9-poster.jpg' },
+    ];
+
+    var cur = 0, started = false;
+    var startX = 0, startY = 0, dragging = false;
+
+    function goTo(idx) {
+      cur = ((idx % VIDEOS.length) + VIDEOS.length) % VIDEOS.length;
+      dots.forEach(function(d,i){ d.style.opacity = i===cur ? '1' : '0.4'; });
+      if (!started) return;
+      // Fade out, swap source, fade in
+      vid.style.opacity = '0';
+      vid.pause();
+      setTimeout(function(){
+        vid.poster = VIDEOS[cur].poster;
+        vid.src    = VIDEOS[cur].src;
+        vid.load();
+        vid.style.opacity = '1';
+        vid.play().catch(function(){});
+      }, 180);
+    }
+
+    vid.addEventListener('ended', function(){ goTo(cur + 1); });
+
+    // Dots
+    dots.forEach(function(d,i){ d.addEventListener('click', function(){ goTo(i); }); });
+
+    // First tap — play with audio
+    window.ugcStart = function() {
+      var overlay = document.getElementById('ugc-play-overlay');
+      if (overlay) overlay.style.display = 'none';
+      var muteBtn = document.getElementById('ugc-mute-btn');
+      if (muteBtn) muteBtn.style.display = 'flex';
+      started = true;
+      vid.play().catch(function(){});
+      window.posthog?.capture('ugc_video_played');
+    };
+
+    // Toggle play/pause
+    window.ugcTogglePlay = function() {
+      var pauseOverlay = document.getElementById('ugc-pause-overlay');
+      if (vid.paused) {
+        vid.play().catch(function(){});
+        if (pauseOverlay) pauseOverlay.style.display = 'none';
+      } else {
+        vid.pause();
+        if (pauseOverlay) pauseOverlay.style.display = 'flex';
+      }
+    };
+
+    // Toggle mute
+    window.ugcToggleMute = function() {
+      vid.muted = !vid.muted;
+      var icon = document.getElementById('ugc-mute-icon');
+      if (icon) {
+        icon.innerHTML = vid.muted
+          ? '<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>'
+          : '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>';
+      }
+    };
+
+    // Tap on video = toggle play (only when started, not swiping)
+    vid.addEventListener('click', function() {
+      if (started) ugcTogglePlay();
+    });
+
+    // Touch swipe
+    screen.addEventListener('touchstart', function(e){
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      dragging = true;
+    }, { passive: true });
+
+    screen.addEventListener('touchend', function(e){
+      if (!dragging) return; dragging = false;
+      var dx = e.changedTouches[0].clientX - startX;
+      var dy = e.changedTouches[0].clientY - startY;
+      if (Math.abs(dx) > 20 && Math.abs(dx) > Math.abs(dy) * 0.8) {
+        goTo(dx < 0 ? cur + 1 : cur - 1);
+      }
+    }, { passive: true });
+
+    // Mouse drag (desktop)
+    screen.addEventListener('mousedown', function(e){ startX = e.clientX; dragging = true; });
+    screen.addEventListener('mouseup', function(e){
+      if (!dragging) return; dragging = false;
+      var dx = e.clientX - startX;
+      if (Math.abs(dx) > 30) goTo(dx < 0 ? cur + 1 : cur - 1);
+    });
+  })();
+
+  /* ── Page nav ─────────────────── */
+  function goToPage(n) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const pg = document.getElementById('page-' + n);
+    if (pg) { pg.classList.add('active'); window.scrollTo({ top:0 }); }
+    if (n === 2) setTimeout(initChart, 80);
+    if (n === 2) window.posthog?.capture('page_2_viewed');
+    if (n === 3) window.posthog?.capture('page_3_viewed');
+  }
+
+  /* ── UGC swiper ───────────────── */
+  let slide = 0;
+  function goToSlide(i) {
+    slide = i;
+    const el = document.getElementById('ugc-slides');
+    if (el) el.style.transform = `translateX(-${i*(100/3)}%)`;
+    document.querySelectorAll('.ugc-dot').forEach((d,j) => d.classList.toggle('active', j===i));
+  }
+  setInterval(() => goToSlide((slide+1)%3), 3400);
+  let tx0 = 0;
+  document.addEventListener('DOMContentLoaded', () => {
+    const sc = document.getElementById('ugc-screen');
+    if (!sc) return;
+    sc.addEventListener('touchstart', e => { tx0 = e.touches[0].clientX; }, {passive:true});
+    sc.addEventListener('touchend',   e => {
+      const dx = e.changedTouches[0].clientX - tx0;
+      if (Math.abs(dx)>40) goToSlide(dx<0 ? Math.min(slide+1,2) : Math.max(slide-1,0));
+    });
+  });
+
+  /* ── Review slider ────────────── */
+  const TOTAL_REVIEWS = 6;
+  let revIdx = 0;
+  function revMove(dir) {
+    revIdx = Math.max(0, Math.min(TOTAL_REVIEWS - 1, revIdx + dir));
+    const track = document.getElementById('reviews-track');
+    if (!track) return;
+    // Offset based on actual slide pixel width + gap — works on both mobile and desktop
+    const slide = track.querySelector('.review-slide');
+    const gap = 16; // matches CSS gap
+    const slideW = slide ? slide.offsetWidth + gap : 0;
+    track.style.transform = `translateX(-${revIdx * slideW}px)`;
+    document.querySelectorAll('.rev-dot').forEach((d,i) => d.classList.toggle('active', i===revIdx));
+  }
+
+  // Touch swipe for reviews
+  document.addEventListener('DOMContentLoaded', () => {
+    const dotsEl = document.getElementById('rev-dots');
+    if (dotsEl) {
+      for (let i=0; i<TOTAL_REVIEWS; i++) {
+        const d = document.createElement('button');
+        d.className = 'rev-dot' + (i===0?' active':'');
+        d.onclick = () => { revIdx = i - 1; revMove(1); };
+        dotsEl.appendChild(d);
+      }
+    }
+    const wrap = document.querySelector('.reviews-slider-wrap');
+    if (!wrap) return;
+    let sx = 0;
+    wrap.addEventListener('touchstart', e => { sx = e.touches[0].clientX; }, { passive: true });
+    wrap.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - sx;
+      if (Math.abs(dx) > 30) revMove(dx < 0 ? 1 : -1);
+    }, { passive: true });
+  });
+
+  /* ── BRK (Beispiel) ──────────── */
+  const curOrg = { newcomer:4, elite:7, takeoff:550, max:2750 };
+  // MAX_EH chosen so right edge ≈ 5.500 €: 1320 EH → factor≈5.09 → net≈5.500
+  const MAX_EH = 1320;
+  // Ø position: 870 EH → net ≈ 3.300 €
+  const AVG_EH = 870;
+
+  function getFactor(org, eh) {
+    if (eh <= org.takeoff) return org.newcomer;
+    if (eh >= org.max)     return org.elite;
+    return org.newcomer + (eh - org.takeoff)/(org.max - org.takeoff)*(org.elite - org.newcomer);
+  }
+  function getNet(org, eh) { return eh * getFactor(org, eh) * 0.8 + 200; }
+  function fmt(n) { return Math.round(n).toLocaleString('de-DE') + ' €'; }
+
+  const PHOTOS = [
+    { min:0,    url:'https://images.unsplash.com/photo-1527786356703-4b100091cd2c?w=600&q=80', emoji:'🗺️', text:'Bewege den Cursor über die Kurve' },
+    { min:400,  url:'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80', emoji:'🎒', text:'Wochenend-Trip finanziert' },
+    { min:900,  url:'https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?w=600&q=80', emoji:'🎪', text:'Festival-Sommer komplett' },
+    { min:1600, url:'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&q=80', emoji:'✈️', text:'1 Monat Backpacking' },
+    { min:2400, url:'https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=600&q=80', emoji:'🚴', text:'Neues Rennrad' },
+    { min:3200, url:'/images/siebtraeger.jpg', emoji:'☕', text:'Siebträgermaschine' },
+    { min:4200, url:'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80', emoji:'🌏', text:'3 Monate Südostasien' },
+  ];
+
+  function updatePhoto(net) {
+    let chosen = PHOTOS[0];
+    PHOTOS.forEach(p => { if (net >= p.min) chosen = p; });
+    // Desktop photo
+    const img = document.getElementById('context-photo');
+    if (img && img.getAttribute('data-src') !== chosen.url) {
+      img.setAttribute('data-src', chosen.url);
+      img.style.opacity = '0';
+      setTimeout(() => { img.src = chosen.url; img.style.opacity = '1'; }, 300);
+    }
+    const cap = document.getElementById('caption-text');
+    const emo = document.getElementById('caption-emoji');
+    if (cap) cap.textContent = chosen.text;
+    if (emo) emo.textContent = chosen.emoji;
+    // Mobile strip photo
+    const imgM = document.getElementById('context-photo-mobile');
+    if (imgM && imgM.getAttribute('data-src') !== chosen.url) {
+      imgM.setAttribute('data-src', chosen.url);
+      imgM.style.opacity = '0';
+      setTimeout(() => { imgM.src = chosen.url; imgM.style.opacity = '1'; }, 300);
+    }
+    const capM = document.getElementById('caption-text-m');
+    const emoM = document.getElementById('caption-emoji-m');
+    if (capM) capM.textContent = chosen.text;
+    if (emoM) emoM.textContent = chosen.emoji;
+  }
+
+  /* ── Chart ───────────────────── */
+  let chartInited = false;
+  function initChart() {
+    if (!chartInited) {
+      chartInited = true;
+      const wrap = document.getElementById('chart-wrap');
+      if (wrap) {
+        wrap.addEventListener('mousemove', onChartMoveWithStop);
+        wrap.addEventListener('mouseleave', onChartLeave);
+        wrap.addEventListener('touchmove', e => {
+          e.preventDefault();
+          onChartMoveWithStop({ clientX: e.touches[0].clientX, _wrap: wrap });
+        }, { passive: false });
+        wrap.addEventListener('touchstart', e => {
+          onChartMoveWithStop({ clientX: e.touches[0].clientX, _wrap: wrap });
+        }, { passive: true });
+        wrap.addEventListener('touchend', onChartLeave, { passive: true });
+      }
+    }
+    redrawChart();
+    setTimeout(runChartIntro, 600);
+    // Show finger hint on mobile
+    if (window.innerWidth <= 768) {
+      const finger = document.getElementById('chart-finger');
+      if (finger) { finger.style.display = 'flex'; finger.classList.add('running'); }
+    }
+  }
+
+  // Non-linear x-axis: center (50%) = AVG_EH = 870 EH = Ø 3.300€
+  // Forward:  pct → eh  = MAX_EH * pct^0.601
+  // Inverse:  eh  → pct = (eh/MAX_EH)^1.664  → x = W * pct
+  function ehToX(eh, W) { return W * Math.pow(eh / MAX_EH, 1.664); }
+  // Y-axis based on net earnings (0 to MAX_NET) for intuitive display
+  // MAX_NET=5600: netToY(3300)=110 → aligns exactly with Woche 4 label
+  const MAX_NET = 5600;
+  function netToY(net, H) { return H - (net / MAX_NET) * H * 0.88 - H * 0.06; }
+
+  function redrawChart() {
+    const svg = document.getElementById('provision-chart');
+    if (!svg) return;
+    const W = 600, H = 260, org = curOrg;
+    const pts = [];
+    for (let eh = 0; eh <= MAX_EH; eh += 10) {
+      const net = getNet(org, eh);
+      pts.push({ x: ehToX(eh,W), y: netToY(net,H) });
+    }
+    const d = pts.map((p,i) => (i===0?`M${p.x.toFixed(1)},${p.y.toFixed(1)}`:`L${p.x.toFixed(1)},${p.y.toFixed(1)}`)).join(' ');
+    document.getElementById('chart-curve').setAttribute('d', d);
+    document.getElementById('chart-area').setAttribute('d', d + ` L${W},${H} L0,${H} Z`);
+
+    /* zones */
+    const tX = ehToX(org.takeoff, W), mX = ehToX(Math.min(org.max,MAX_EH), W);
+    document.getElementById('chart-bg').innerHTML =
+      `<rect x="0" y="0" width="${tX}" height="${H}" fill="#E0F4FF" opacity=".5"/>` +
+      `<rect x="${tX}" y="0" width="${mX-tX}" height="${H}" fill="#FFE0F0" opacity=".35"/>` +
+      `<rect x="${mX}" y="0" width="${W-mX}" height="${H}" fill="#F0FFE0" opacity=".4"/>`;
+
+    /* grid */
+    let gl = '';
+    for (let i=1;i<5;i++) gl += `<line x1="0" y1="${H/5*i}" x2="${W}" y2="${H/5*i}" stroke="rgba(27,42,74,0.06)" stroke-width="1"/>`;
+    document.getElementById('chart-grid').innerHTML = gl;
+
+    /* takeoff marker */
+    const mkr = document.getElementById('takeoff-marker');
+    if (mkr) mkr.style.left = (Math.pow(org.takeoff/MAX_EH, 1.664)*100) + '%';
+
+    /* Ø 3.300€ marker at AVG_EH — use non-linear mapping */
+    const avgX = ehToX(AVG_EH, W);
+    const avgLine = document.getElementById('avg-line');
+    const avgBg   = document.getElementById('avg-badge-bg');
+    const avgTxt  = document.getElementById('avg-badge-txt');
+    if (avgLine) { avgLine.setAttribute('x1', avgX); avgLine.setAttribute('x2', avgX); }
+    if (avgBg)   { avgBg.setAttribute('x', avgX + 5); }
+    if (avgTxt)  { avgTxt.setAttribute('x', avgX + 9); }
+
+    updateDisplay(AVG_EH);
+  }
+
+  function onChartMove(e) {
+    const wrap = e._wrap || document.getElementById('chart-wrap');
+    if (!wrap) return;
+    const rect = wrap.getBoundingClientRect();
+    const pct  = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    const eh   = Math.round(MAX_EH * Math.pow(pct, 0.601) / 10) * 10;
+    const W=600, H=260, org=curOrg;
+    const svgX = pct * W;
+    const f    = getFactor(org, eh);
+    const net  = getNet(org, eh);
+    const svgY = netToY(net, H);
+
+    const line = document.getElementById('cursor-line');
+    const dot  = document.getElementById('cursor-dot');
+    if (line) { line.setAttribute('x1',svgX); line.setAttribute('x2',svgX); line.style.opacity='1'; }
+    if (dot)  { dot.setAttribute('cx',svgX); dot.setAttribute('cy',svgY); dot.style.opacity='1'; }
+
+    const tt = document.getElementById('chart-tooltip');
+    if (tt) {
+      document.getElementById('tt-eh').textContent     = eh + ' EH';
+      document.getElementById('tt-factor').textContent = 'Faktor ' + f.toFixed(1);
+      document.getElementById('tt-money').textContent  = fmt(net);
+      // keep tooltip inside bounds
+      const ttLeft = Math.min(pct * rect.width, rect.width - 110);
+      tt.style.left = Math.max(10, ttLeft) + 'px';
+      const dotY = (svgY / H) * rect.height;
+      tt.style.top = dotY + 'px';
+      // flip below dot if tooltip would overlap photo strip (top ~90px of chart area)
+      if (dotY < 90) {
+        tt.classList.add('flip');
+      } else {
+        tt.classList.remove('flip');
+      }
+      tt.style.opacity = '1';
+      updatePhoto(net);
+    }
+    updateDisplay(eh);
+  }
+
+  function onChartLeave() {
+    ['cursor-line','cursor-dot'].forEach(id => { const el=document.getElementById(id); if(el) el.style.opacity='0'; });
+    const tt = document.getElementById('chart-tooltip'); if(tt) tt.style.opacity='0';
+  }
+
+  /* ── Chart intro animation ────── */
+  let chartAnimDone = false;
+  let chartAnimRaf  = null;
+
+  function runChartIntro() {
+    if (chartAnimDone) return;
+    const wrap = document.getElementById('chart-wrap');
+    if (!wrap) return;
+    const W = 600, H = 260;
+
+    // Keyframes: 0→center→0→center (2 sweeps so user clearly sees it's interactive)
+    // Each sweep: 1200ms, pause 200ms at peaks
+    const SWEEP = 1200, PAUSE = 300;
+    const SEQ = [
+      { from: 0, to: 0.5, dur: SWEEP },
+      { from: 0.5, to: 0.5, dur: PAUSE },  // pause at center
+      { from: 0.5, to: 0.05, dur: 700 },   // sweep back (faster)
+      { from: 0.05, to: 0.05, dur: PAUSE },
+      { from: 0.05, to: 0.5, dur: SWEEP },  // sweep to center again
+      { from: 0.5, to: 0.5, dur: PAUSE },
+    ];
+    const totalDur = SEQ.reduce((s, k) => s + k.dur, 0);
+    const start = performance.now();
+
+    function easeInOut(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+
+    function getPct(elapsed) {
+      let acc = 0;
+      for (const k of SEQ) {
+        if (elapsed <= acc + k.dur) {
+          const localT = (elapsed - acc) / k.dur;
+          const e = easeInOut(Math.max(0, Math.min(1, localT)));
+          return k.from + (k.to - k.from) * e;
+        }
+        acc += k.dur;
+      }
+      return 0.5; // end at center
+    }
+
+    function frame(now) {
+      if (chartAnimDone) return;
+      const elapsed = now - start;
+      const pct = getPct(elapsed);
+      const eh = Math.round(MAX_EH * Math.pow(Math.max(0.0001, pct), 0.601) / 10) * 10;
+      const svgX = pct * W;
+      const net  = getNet(curOrg, eh);
+      const svgY = netToY(net, H);
+
+      const line = document.getElementById('cursor-line');
+      const dot  = document.getElementById('cursor-dot');
+      if (line) { line.setAttribute('x1',svgX); line.setAttribute('x2',svgX); line.style.opacity='1'; }
+      if (dot)  { dot.setAttribute('cx',svgX); dot.setAttribute('cy',svgY); dot.style.opacity='1'; }
+      updateDisplay(eh);
+
+      if (elapsed < totalDur) {
+        chartAnimRaf = requestAnimationFrame(frame);
+      } else {
+        // finished – keep hint visible until interaction
+        const hint = document.getElementById('chart-hint');
+        if (hint) hint.style.opacity='1';
+      }
+    }
+    chartAnimRaf = requestAnimationFrame(frame);
+  }
+
+  let chartInteractedOnce = false;
+  function onChartMoveWithStop(e) {
+    if (!chartAnimDone) {
+      chartAnimDone = true;
+      if (chartAnimRaf) { cancelAnimationFrame(chartAnimRaf); chartAnimRaf = null; }
+    }
+    if (!chartInteractedOnce) {
+      chartInteractedOnce = true;
+      // Hide hint and finger on first real interaction
+      const hint = document.getElementById('chart-hint');
+      if (hint) hint.style.opacity = '0';
+      const finger = document.getElementById('chart-finger');
+      if (finger) { finger.style.opacity = '0'; setTimeout(() => { finger.style.display = 'none'; }, 300); }
+      window.posthog?.capture('calculator_interacted');
+    }
+    onChartMove(e);
+  }
+
+  function updateDisplay(eh) {
+    const org=curOrg, f=getFactor(org,eh), gross=eh*f, net=gross*0.8+200;
+    const gEl=document.getElementById('r-gross'), nEl=document.getElementById('r-net');
+    if(gEl) gEl.textContent=fmt(gross);
+    if(nEl) nEl.textContent=fmt(net);
+  }
+
+  /* ── Form ────────────────────── */
+  function markInvalid(el) {
+    if (el) { el.style.borderColor = '#E5007D'; el.focus(); }
+  }
+  function markValid(el) {
+    if (el) el.style.borderColor = '';
+  }
+
+  function nextStep(n) {
+    // Validate before advancing
+    if (n === 2) {
+      const fn  = document.getElementById('f-fn');
+      const ln  = document.getElementById('f-ln');
+      const age = document.getElementById('f-age');
+      if (!fn?.value?.trim())  { markInvalid(fn);  return; } markValid(fn);
+      if (!ln?.value?.trim())  { markInvalid(ln);  return; } markValid(ln);
+      if (!age?.value?.trim()) { markInvalid(age); return; } markValid(age);
+      // TikTok: user started form (high-intent signal)
+      if (window.ttq) window.ttq.track('InitiateCheckout', {
+        contents: [{ content_id: 'hsp_bewerbung', content_name: 'HSP Ferienjob Bewerbung' }],
+      });
+    }
+    if (n === 3) {
+      const email = document.getElementById('f-email');
+      const phone = document.getElementById('f-phone');
+      if (!email?.value?.trim() || !email.value.includes('@')) { markInvalid(email); return; } markValid(email);
+      if (!phone?.value?.trim() || phone.value.trim().length < 5) { markInvalid(phone); return; } markValid(phone);
+    }
+    [1,2,3].forEach(i => document.getElementById('fs-'+i)?.classList.add('hidden'));
+    document.getElementById('fs-'+n)?.classList.remove('hidden');
+    const p={1:33,2:66,3:100}[n]||33;
+    const bar=document.getElementById('progress-bar'); if(bar) bar.style.width=p+'%';
+    document.getElementById('step-label').textContent='Schritt '+n+' von 3';
+    document.getElementById('step-pct').textContent=p+' %';
+    if (n > 1) window.posthog?.capture('form_step_completed', { step_number: n - 1 });
+  }
+  async function submitForm() {
+    // Validate required fields in step 3
+    const motive = document.getElementById('f-motive')?.value?.trim();
+    if (!motive) {
+      const el = document.getElementById('f-motive');
+      if (el) { el.style.borderColor = '#E5007D'; el.focus(); }
+      return;
+    }
+    // Reset border if valid
+    const motiveEl = document.getElementById('f-motive');
+    if (motiveEl) motiveEl.style.borderColor = '';
+
+    // Show loading state
+    const btn = document.querySelector('#fs-3 .btn-primary');
+    if (btn) { btn.disabled = true; btn.textContent = 'Wird gesendet …'; }
+
+    // Collect UTM params from URL
+    const params = new URLSearchParams(window.location.search);
+
+    const payload = {
+      vorname:       document.getElementById('f-fn')?.value?.trim() || '',
+      nachname:      document.getElementById('f-ln')?.value?.trim() || '',
+      alter:         document.getElementById('f-age')?.value?.trim() || '',
+      email:         document.getElementById('f-email')?.value?.trim() || '',
+      phone:         document.getElementById('f-phone')?.value?.trim() || '',
+      erreichbarkeit: document.getElementById('f-reach')?.value || '',
+      stadt:         document.getElementById('f-city')?.value?.trim() || '',
+      plz:           document.getElementById('f-plz')?.value?.trim() || '',
+      land:          document.getElementById('f-land')?.value || '',
+      motivation:    document.getElementById('f-motive')?.value?.trim() || '',
+      utm_source:    params.get('utm_source') || sessionStorage.getItem('utm_source') || '',
+      utm_medium:    params.get('utm_medium') || sessionStorage.getItem('utm_medium') || '',
+      utm_campaign:  params.get('utm_campaign') || sessionStorage.getItem('utm_campaign') || '',
+      utm_content:   params.get('utm_content') || sessionStorage.getItem('utm_content') || '',
+      utm_term:      params.get('utm_term') || sessionStorage.getItem('utm_term') || '',
+      fbclid:        params.get('fbclid') || sessionStorage.getItem('fbclid') || '',
+      fbclid_ts:     sessionStorage.getItem('fbclid_ts') || '',
+      gclid:         params.get('gclid') || sessionStorage.getItem('gclid') || '',
+      ScCid:         params.get('ScCid') || sessionStorage.getItem('ScCid') || '',
+      ttclid:        params.get('ttclid') || sessionStorage.getItem('ttclid') || '',
+      _hp:           document.getElementById('f-hp')?.value || '',
+    };
+
+    // TikTok deduplication ID (same ID goes to pixel + Events API)
+    const ttEventId = 'hsp_lead_' + Date.now() + '_' + Math.random().toString(36).slice(2, 9);
+    payload.tiktok_event_id = ttEventId;
+
+    // A/B variant
+    payload.ab_variant = 'a';
+
+    // PostHog event
+    if (window.posthog) window.posthog.capture('form_submitted', { utm_source: payload.utm_source, utm_medium: payload.utm_medium, utm_campaign: payload.utm_campaign, ab_variant: 'a' });
+
+    try {
+      const res = await fetch('/api/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (res.ok) {
+        // TikTok pixel Lead event (fires before redirect, same event_id as server)
+        if (window.ttq) {
+          window.ttq.identify({ email: payload.email, phone_number: payload.phone });
+          window.ttq.track('Lead', {
+            contents: [{ content_id: 'hsp_bewerbung', content_name: 'HSP Ferienjob Bewerbung' }],
+            currency: 'EUR',
+            value: '0',
+          }, { event_id: ttEventId });
+        }
+        window.location.href = '/danke';
+      } else {
+        throw new Error('Server error');
+      }
+    } catch (e) {
+      // Fallback: show inline success if API fails
+      [1,2,3].forEach(i => document.getElementById('fs-'+i)?.classList.add('hidden'));
+      document.getElementById('fs-ok')?.classList.remove('hidden');
+      document.getElementById('progress-bar').style.width='100%';
+    }
+  }
+
+  /* ── NGO slider (mobile, 2 per view) ── */
+  // Single NGO (Rotes Kreuz) — no slider needed
+
+  window.goToPage=goToPage; window.goToSlide=goToSlide; window.nextStep=nextStep;
+  window.submitForm=submitForm; window.revMove=revMove;
+</script>
+
+<!-- Footer -->
+<footer style="background:#1B2A4A;padding:1.25rem 1.5rem;text-align:center;">
+  <p style="margin:0;font-size:0.78rem;color:rgba(255,255,255,0.45);">
+    © 2026 hsp Die Fundraiser GmbH &nbsp;·&nbsp;
+    <a href="/impressum" style="color:rgba(255,255,255,0.55);text-decoration:none;">Impressum</a>
+    &nbsp;·&nbsp;
+    <a href="/datenschutz" style="color:rgba(255,255,255,0.55);text-decoration:none;">Datenschutz</a>
+    &nbsp;·&nbsp;
+    <a href="#" onclick="window.openCookieSettings && window.openCookieSettings(); return false;" style="color:rgba(255,255,255,0.55);text-decoration:none;">Cookie-Einstellungen</a>
+  </p>
+</footer>
+
+</Layout>
