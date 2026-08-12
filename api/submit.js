@@ -52,8 +52,8 @@ function sanitize(value, maxLen = 500) {
 
 // ── Allowed origins ────────────────────────────────────────────
 const ALLOWED_ORIGINS = [
-  'https://starten.hsp-derjob.de',
-  'https://hsp-landingpage.vercel.app',
+  'https://starten.hsp-derjob.at',
+  'https://hsp-landingpage-at.vercel.app',
 ];
 
 // ── Handler ────────────────────────────────────────────────────
@@ -118,7 +118,7 @@ export default async function handler(req, res) {
   if (ScCid)          fields['Content'] = (fields['Content'] ? fields['Content'] + ' | ScCid:' : 'ScCid:') + sanitize(ScCid, 200);
 
   try {
-    // Airtable
+    // Airtable — selbes Leadsheet wie DE
     const airtableRes = await fetch(
       `https://api.airtable.com/v0/appnSlhPDnFbHZGnh/tblL8ttCgeBrPZ7fn`,
       {
@@ -138,14 +138,15 @@ export default async function handler(req, res) {
     }
 
     // Make Webhook
-    if (process.env.MAKE_WEBHOOK_URL) {
+    const makeWebhookUrl = process.env.MAKE_AT_WEBHOOK_URL || process.env.MAKE_WEBHOOK_URL;
+    if (makeWebhookUrl) {
       try {
-        await fetch(process.env.MAKE_WEBHOOK_URL, {
+        await fetch(makeWebhookUrl, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             fields: {
-              formName:  'hsp26 // Starten LP 🔴',
+              formName:  'hsp26 // Starten LP AT 🇦🇹',
               field0:    sanitize(vorname, 100),
               field1:    sanitize(nachname, 100),
               field2:    sanitize(motivation, 2000),
@@ -190,7 +191,7 @@ export default async function handler(req, res) {
         data: [{
           event_name:       'Lead',
           event_time:       eventTime,
-          event_source_url: 'https://starten.hsp-derjob.de/danke',
+          event_source_url: 'https://starten.hsp-derjob.at/danke',
           action_source:    'website',
           user_data:        userData,
         }],
@@ -214,51 +215,7 @@ export default async function handler(req, res) {
       }
     }
 
-    // TikTok Events API — CompleteRegistration (server-side)
-    if (process.env.TIKTOK_ACCESS_TOKEN) {
-      const ttPayload = {
-        pixel_code:      'C29B5QNMU8Q03RAIFDR0',
-        event_source:    'web',
-        event_source_id: 'C29B5QNMU8Q03RAIFDR0',
-        data: [{
-          event:      'CompleteRegistration',
-          event_time: Math.floor(Date.now() / 1000),
-          event_id:   sanitize(tiktok_event_id, 100) || `hsp_server_${Date.now()}`,
-          user: {
-            ...(ttclid && { ttclid: sanitize(ttclid, 500) }),
-            email:      hash(email),
-            phone_number: hash(phone?.replace(/\s+/g, '')),
-            ip:         ip !== 'unknown' ? ip : undefined,
-            user_agent: req.headers['user-agent'] || '',
-            locale:     'de-DE',
-          },
-          properties: {
-            currency: 'EUR',
-            value:    0,
-            contents: [{ content_id: 'hsp_bewerbung', content_name: 'HSP Ferienjob Bewerbung' }],
-          },
-          page: {
-            url:      'https://starten.hsp-derjob.de/danke',
-            referrer: req.headers['referer'] || '',
-          },
-        }],
-      };
-      try {
-        const ttRes = await fetch('https://business-api.tiktok.com/open_api/v1.3/event/track/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Access-Token': process.env.TIKTOK_ACCESS_TOKEN,
-          },
-          body: JSON.stringify(ttPayload),
-        });
-        if (!ttRes.ok) {
-          console.error('TikTok Events API error:', await ttRes.text());
-        }
-      } catch (ttErr) {
-        console.error('TikTok Events API exception:', ttErr);
-      }
-    }
+    // TikTok: kein AT-Pixel — übersprungen
 
     return res.status(200).json({ ok: true });
   } catch (e) {
