@@ -34,8 +34,8 @@ function validate(body) {
   if (!email    || typeof email    !== 'string' || !email.includes('@')        || email.length             > 254) return 'email';
   if (!phone    || typeof phone    !== 'string' || phone.trim().length     < 5 || phone.trim().length      > 30)  return 'phone';
   if (!motivation || typeof motivation !== 'string' || motivation.trim().length < 1 || motivation.trim().length > 2000) return 'motivation';
-  const { alter } = body;
-  if (alter && (isNaN(Number(alter)) || Number(alter) < 16 || Number(alter) > 99)) return 'alter';
+  const { geburtsdatum } = body;
+  if (geburtsdatum && (typeof geburtsdatum !== 'string' || !/^\d{2}\.\d{2}\.\d{4}$/.test(geburtsdatum))) return 'geburtsdatum';
   return null;
 }
 
@@ -86,7 +86,7 @@ export default async function handler(req, res) {
   }
 
   const {
-    vorname, nachname, alter,
+    vorname, nachname, geburtsdatum,
     email, phone, erreichbarkeit,
     stadt, plz, land, motivation,
     utm_source, utm_medium, utm_campaign, utm_content, utm_term,
@@ -153,7 +153,7 @@ export default async function handler(req, res) {
               field3:    sanitize(email, 254),
               field4:    sanitize(phone, 30),
               field5:    sanitize(erreichbarkeit, 100),
-              field6:    sanitize(alter, 10),
+              field6:    sanitize(geburtsdatum, 10),
               field7:    sanitize(utm_medium, 200),
               field8:    sanitize(utm_source, 200),
               field9:    sanitize(utm_campaign, 200),

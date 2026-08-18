@@ -397,7 +397,7 @@ import Layout from '../layouts/Layout.astro';
               <div class="fgroup"><label class="flabel">Vorname *</label><input id="f-fn" type="text" class="finput" placeholder="Max" /></div>
               <div class="fgroup"><label class="flabel">Nachname *</label><input id="f-ln" type="text" class="finput" placeholder="Mustermann" /></div>
             </div>
-            <div class="fgroup"><label class="flabel">Alter *</label><input id="f-age" type="number" class="finput" placeholder="21" min="18" /></div>
+            <div class="fgroup"><label class="flabel">Geburtsdatum *</label><input id="f-age" type="text" class="finput" placeholder="09.04.1999" maxlength="10" /></div>
           </div>
           <!-- Honeypot: hidden from real users, bots fill it in -->
           <div style="position:absolute;left:-9999px;top:-9999px;opacity:0;pointer-events:none" aria-hidden="true">
@@ -1169,7 +1169,7 @@ import Layout from '../layouts/Layout.astro';
     const payload = {
       vorname:       document.getElementById('f-fn')?.value?.trim() || '',
       nachname:      document.getElementById('f-ln')?.value?.trim() || '',
-      alter:         document.getElementById('f-age')?.value?.trim() || '',
+      geburtsdatum:  document.getElementById('f-age')?.value?.trim() || '',
       email:         document.getElementById('f-email')?.value?.trim() || '',
       phone:         document.getElementById('f-phone')?.value?.trim() || '',
       erreichbarkeit: document.getElementById('f-reach')?.value || '',
