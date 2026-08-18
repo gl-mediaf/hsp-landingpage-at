@@ -107,6 +107,7 @@ export default async function handler(req, res) {
     'Status':     'Beworben',
   };
 
+  if (geburtsdatum)   fields['Geburtsdatum']   = sanitize(geburtsdatum, 10);
   if (erreichbarkeit) fields['Erreichbarkeit'] = sanitize(erreichbarkeit, 100);
   if (utm_source)     fields['Source']         = sanitize(utm_source, 200);
   if (utm_medium)     fields['Medium']         = sanitize(utm_medium, 200);
