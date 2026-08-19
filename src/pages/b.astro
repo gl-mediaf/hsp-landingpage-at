@@ -177,46 +177,6 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
-    <!-- GOOGLE REVIEWS SLIDER -->
-    <section class="bg-[#1B2A4A] py-10 md:py-16 px-5 overflow-hidden">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-10">
-          <h2 class="hd text-white" style="font-size:clamp(2rem,6vw,3rem);line-height:1.0">
-            Was andere sagen.
-          </h2>
-          <div class="flex items-center justify-center gap-2 mt-3">
-            <span class="text-yellow-400 text-xl">★★★★★</span>
-            <span class="hd text-white" style="font-size:1.4rem">4.8</span>
-            <span class="text-white/40 text-sm font-semibold">auf Google</span>
-          </div>
-        </div>
-
-        <!-- Image slider -->
-        <div class="reviews-slider-wrap">
-          <div class="reviews-track" id="reviews-track">
-            {[
-              'https://static.funnelcockpit.com/upload/LLmaqMFur7JxCm9fW/0792d43e1c825562988748393508c1b5.png',
-              'https://static.funnelcockpit.com/upload/LLmaqMFur7JxCm9fW/dac8c3f2ef50bf4f8d1d47a3e80cf14e.png',
-              'https://static.funnelcockpit.com/upload/LLmaqMFur7JxCm9fW/d2c0b0e3ad7ceed17618c4c1178f6b6b.png',
-              'https://static.funnelcockpit.com/upload/LLmaqMFur7JxCm9fW/ff88471118fbb49a9fe62493d87ee8e2.png',
-              'https://static.funnelcockpit.com/upload/LLmaqMFur7JxCm9fW/ffd8e294bb250c2a760960795324b0e9.png',
-              'https://static.funnelcockpit.com/upload/LLmaqMFur7JxCm9fW/0a611f8ed1e9324a436d4b4394587988.png',
-            ].map(url => (
-              <div class="review-slide">
-                <img src={url} alt="Google Bewertung" class="review-img" />
-              </div>
-            ))}
-          </div>
-          <!-- prev/next -->
-          <button class="rev-btn rev-prev" id="rev-prev" onclick="revMove(-1)">‹</button>
-          <button class="rev-btn rev-next" id="rev-next" onclick="revMove(1)">›</button>
-        </div>
-
-        <!-- dots -->
-        <div class="flex justify-center gap-2 mt-6" id="rev-dots"></div>
-
-      </div>
-    </section>
 
     <!-- CTA TO PAGE 2 -->
     <section class="py-12 md:py-20 px-5 text-center" style="background:#97BF0D">
@@ -530,8 +490,8 @@ import Layout from '../layouts/Layout.astro';
   @keyframes sdrop { 0%,100% { top:6px; opacity:1; } 80% { top:18px; opacity:0; } }
 
   /* NGO logos */
-  .ngo-card { background: #fff; border-radius: 14px; padding: 24px 40px; display: flex; align-items: center; justify-content: center; min-width: 200px; }
-  .ngo-logo-color { height: 80px; object-fit: contain; }
+  .ngo-card { background: #fff; border-radius: 14px; padding: 32px 60px; display: flex; align-items: center; justify-content: center; min-width: 240px; }
+  .ngo-logo-color { height: 120px; object-fit: contain; }
 
   /* NGO mobile slider */
   .ngo-slider-wrap { overflow: hidden; }
