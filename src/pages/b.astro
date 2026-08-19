@@ -206,20 +206,35 @@ import Layout from '../layouts/Layout.astro';
       <img src="/images/hsp-logo.png" alt="hsp" class="hsp-logo-img" />
     </nav>
 
-    <!-- Mindestgarantie -->
-    <section class="bg-white pt-24 pb-14 px-5">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="hd text-[#1B2A4A] text-center mb-3" style="font-size:clamp(2rem,6vw,3rem)">
-          Dein Geld. <span style="color:#97BF0D">Dein Einsatz.</span>
-        </h2>
-        <p class="text-[#1B2A4A]/55 text-base md:text-lg text-center max-w-xl mx-auto mb-10 font-semibold">
-          Du wirst nach Provision bezahlt. Je mehr du begeisterst, desto mehr machst du.
-        </p>
-        <div class="flex flex-col items-center gap-2">
-          <p class="text-[#1B2A4A]/40 text-xs font-bold uppercase tracking-widest">Das ist im Schnitt für dich drin</p>
-          <p class="hd" style="color:#97BF0D;font-size:clamp(3rem,10vw,5.5rem);line-height:1">Ø 4.400 €</p>
-          <p class="text-[#1B2A4A]/50 font-semibold text-base">in 4 Wochen – bei neuen Fundraisern</p>
+    <!-- Earnings Split Section -->
+    <section class="bg-white pt-16 pb-14 px-5">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+        <!-- Foto + Bubble -->
+        <div class="relative">
+          <img src="/images/pr-hero.jpg" alt="Fundraiser unterwegs" class="w-full rounded-3xl object-cover shadow-xl" style="aspect-ratio:4/5" />
+          <!-- Floating Stat Bubble -->
+          <div class="absolute -bottom-5 -right-4 shadow-2xl flex flex-col items-center justify-center text-center" style="background:#97BF0D;border-radius:50%;width:150px;height:150px;padding:12px">
+            <p class="hd text-white" style="font-size:1.6rem;line-height:1.05">Ø 4.400 €</p>
+            <p class="text-white/85 text-xs font-bold mt-1">in 4 Wochen</p>
+          </div>
         </div>
+
+        <!-- Text -->
+        <div>
+          <h2 class="hd text-[#1B2A4A] mb-4" style="font-size:clamp(2rem,5vw,3rem);line-height:1.05">
+            Das machst du –<br /><span style="color:#97BF0D">im Schnitt.</span>
+          </h2>
+          <p class="text-[#1B2A4A]/60 text-base md:text-lg leading-relaxed font-semibold mb-6">
+            Du wirst nach Provision bezahlt. Kein fixes Gehalt –
+            dein Einsatz bestimmt dein Ergebnis. Je mehr du begeisterst,
+            desto mehr ist für dich drin.
+          </p>
+          <p class="text-[#1B2A4A]/40 text-xs font-bold uppercase tracking-widest">So erreichen neue Fundraiser im Schnitt</p>
+          <p class="hd mt-1" style="color:#97BF0D;font-size:clamp(2.5rem,8vw,4.5rem);line-height:1">Ø 4.400 €</p>
+          <p class="text-[#1B2A4A]/50 font-semibold text-sm mt-1">in nur 4 Wochen</p>
+        </div>
+
       </div>
     </section>
 
